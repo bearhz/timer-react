@@ -1,0 +1,136 @@
+:root{
+  --container-color: white;
+  --container-width: 400px;
+  --button-color: #4351A1;
+  --button-color2: #435000;
+  --body-color: #A7ABD3;
+  --round-normal: 10px;
+  --round-large: 15px;
+  --button-height: 30px;
+  --small-button-height: 20px;
+  --button-press-radio: 70%;
+}
+
+.container{
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  width: var(--container-width);
+  min-width: var(--container-width);
+  max-width: var(--container-width);
+  height: max-content;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: max-content;
+  align-items: end;
+}
+
+.button{
+  background-color: var(--button-color);  
+  border-radius: var(--round-normal) var(--round-normal) 0 0;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.button:hover{
+  background-color: var(--button-color2);
+  cursor: pointer;
+}
+
+.sign{
+  display: block;
+  font-size: 1.5em;
+  color: var(--container-color);
+  margin-top: 3px;
+}
+
+.buttonPress{
+  height: var(--button-press-radio);
+  min-height: var(--button-press-radio);
+}
+
+.buttonRelease{
+  height: var(--button-height);
+  min-height: var(--button-height);
+}
+
+.button1{
+  grid-column: 2;
+}
+
+.button2{
+  grid-column: 4;
+}
+
+.body{
+  background-color: var(--body-color);
+  padding: 30px;  
+  border-radius: var(--round-normal);
+  box-shadow: 10px 5px 5px gray;
+}
+
+.flashBg {
+  animation: blink 0.6s 6;
+}
+
+@keyframes blink {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.time{
+  text-align: center;
+  font-size: 10em;
+  background-color: var(--container-color);
+  color: black;
+}
+
+.smallButtons{
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
+
+.smallButton{
+  height: var(--small-button-height);
+  background-color: var(--button-color);
+  border-radius: var(--round-large);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallButton:hover{
+  background-color: var(--button-color2);
+  cursor: pointer;
+}
+
+.smallButton:active {
+  /* background-color: var(--button-color2); */
+  transform: translateY(4px);
+}
+
+.smallButton1{
+  grid-column: 2;
+}
+
+.smallButton2{
+  grid-column: 4;
+}
+
+.smallButton3{
+  grid-column: 6;
+}
+
